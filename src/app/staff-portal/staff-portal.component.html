@@ -26,7 +26,7 @@
 
   <!-- Save the captured image and Logout Button in the same line -->
   <div class="button-container" [hidden]="!imageSrc">
-    <button class="btn btn-success" (click)="saveImage()">Save Image</button>
+    <button class="btn btn-success" (click)="saveImage()" [disabled]="saveButtonDisabled">Save Image</button>
     <button class="btn btn-danger" (click)="logout()">Logout</button>
   </div>
 </div>

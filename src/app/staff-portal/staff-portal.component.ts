@@ -14,6 +14,7 @@ export class StaffPortalComponent implements OnInit {
   webcamActive: boolean = false;
   videoStream: any;
   attendanceRecords: any[] = [];
+  saveButtonDisabled = true;
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -52,6 +53,7 @@ export class StaffPortalComponent implements OnInit {
     if (context) {
       context.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
       this.imageSrc = canvas.toDataURL('image/png');
+      this.saveButtonDisabled = false;
     }
   }
 
