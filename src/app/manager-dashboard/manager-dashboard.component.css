@@ -1,0 +1,209 @@
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  /* Card Styles */
+  .card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    margin-top: 61px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .card-header {
+    padding: 1rem 1.5rem;
+    background: #007bff;
+    color: #fff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .card-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  /* Input Card */
+  .input-card .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;  /* Ensure the fields wrap if there's not enough space */
+    gap: 10px;        /* Adds space between fields */
+  }
+  
+  .form-group {
+    flex: 1 1 18%;     /* Adjust the width of each form field */
+  }
+  
+  /* .form-group {
+    flex: 1;
+    min-width: 200px;
+  } */
+  
+  .form-group-button {
+    flex: 0 0 auto;
+  }
+  
+  .form-control {
+    width: 208px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  /* Table Styles */
+  .table {
+    width: 100%;
+    margin-bottom: 0;
+    border-collapse: collapse;
+  }
+  
+  .table thead th {
+    background-color: #f8f9fa;
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  .table tbody td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    background-color: #239d0f;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  /* Style the buttons */
+button {
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-right: 8px; /* Adds space between buttons */
+}
+
+/* Style for Edit button */
+button[title="Edit"] {
+  background-color: #007bff;
+  color: white;
+}
+
+button[title="Edit"]:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Button slightly grows on hover */
+}
+
+/* Style for Delete button */
+button[title="Delete"] {
+  background-color: #dc3545;
+  color: white;
+}
+
+button[title="Delete"]:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+/* Style for Save button */
+button[title="Save"] {
+  background-color: #28a745;
+  color: white;
+}
+
+button[title="Save"]:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Style for Cancel button */
+button[title="Cancel"] {
+  background-color: #6c757d;
+  color: white;
+}
+
+button[title="Cancel"]:hover {
+  background-color: #5a6268;
+  transform: scale(1.05);
+}
+
+/* Style for buttons container (spacing and alignment) */
+td button {
+  margin-right: 10px;
+}
+
+/* Style for the table cells */
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+
+/* Header Style */
+.header {
+  display: flex;
+  justify-content: space-between;  /* Distribute space between the items */
+  align-items: center;  /* Vertically align the items */
+  background-color: #f09e06;  /* Light background color */
+  padding: 10px 20px;  /* Add padding */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Light shadow effect */
+  margin: -36px;
+}
+
+.header h3 {
+  margin: 0;  /* Remove any default margin */
+  font-size: 24px;
+  color: #333;  /* Dark text color */
+}
+
+.logout-btn {
+  background-color: #dc3545;  /* Red background for the logout button */
+  color: white;  /* White text */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;  /* Darker red when hovering */
+}

@@ -1,0 +1,32 @@
+<div class="container">
+  <!-- Dynamically rendered staff details -->
+  <div id="staffDetails">
+    <h3>{{ staff?.name }}</h3>
+    <p><strong>Role:</strong> {{ staff?.role }}</p>
+    <p><strong>Shift:</strong> {{ staff?.shift }}</p>
+    <p><strong>Working Days:</strong> {{ staff?.workingDays }}</p>
+    <p><strong>Username:</strong> {{ staff?.username }}</p>
+  </div>
+
+  <!-- Webcam Section -->
+  <div class="webcam-container" [hidden]="!webcamActive">
+    <video id="webcam" width="320" height="240" autoplay></video>
+  </div>
+
+  <!-- Capture Image Button below the webcam section -->
+  <div class="capture-button-container" [hidden]="!webcamActive">
+    <button class="btn btn-primary" (click)="captureImage()">Capture Image</button>
+  </div>
+
+  <!-- Display captured image -->
+  <div class="captured-image" [hidden]="!imageSrc">
+    <h4>Attendance Image:</h4>
+    <img [src]="imageSrc" alt="Captured Attendance Image" width="200">
+  </div>
+
+  <!-- Save the captured image and Logout Button in the same line -->
+  <div class="button-container" [hidden]="!imageSrc">
+    <button class="btn btn-success" (click)="saveImage()">Save Image</button>
+    <button class="btn btn-danger" (click)="logout()">Logout</button>
+  </div>
+</div>

@@ -1,0 +1,328 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 380px;
+  backdrop-filter: blur(10px);
+}
+
+h2 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* Role Selection */
+.role-selection {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  height: 200px;
+}
+
+.role-card {
+  background-color: #fff;
+  width: 170px;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.role-card:hover {
+  background-color: #4CAF50;
+  transform: scale(1.1);
+  color: white;
+}
+
+/* Modern Animated Avatar */
+.animated-avatar {
+  width: 90px;
+  height: 90px;
+  background-color: #f3f3f3;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: bounce 1.5s infinite alternate ease-in-out;
+  overflow: hidden;
+}
+
+/* Manager Avatar */
+.manager-avatar {
+  background: linear-gradient(45deg, #ff9800, #ff5722);
+  box-shadow: 0 4px 12px rgba(255, 87, 34, 0.5);
+}
+
+/* Staff Avatar */
+.staff-avatar {
+  background: linear-gradient(45deg, #2196f3, #1e88e5);
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.5);
+}
+
+/* Head (For Both) */
+.animated-avatar::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  background: #fdd7b0;
+  border-radius: 50%;
+}
+
+/* Body */
+.animated-avatar::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  width: 50px;
+  height: 35px;
+  border-radius: 10px;
+}
+
+/* Manager Body */
+.manager-avatar::after {
+  background: linear-gradient(45deg, #ff9800, #e65100);
+}
+
+/* Staff Body */
+.staff-avatar::after {
+  background: linear-gradient(45deg, #1e88e5, #0d47a1);
+}
+
+/* Eyes */
+.animated-avatar .eye {
+  position: absolute;
+  top: 18px;
+  width: 6px;
+  height: 6px;
+  background: black;
+  border-radius: 50%;
+}
+
+.animated-avatar .eye.left {
+  left: 20px;
+}
+
+.animated-avatar .eye.right {
+  right: 20px;
+}
+
+/* Manager's Tie */
+.manager-avatar .tie {
+  position: absolute;
+  top: 50px;
+  width: 8px;
+  height: 12px;
+  background: red;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Staff's Collar */
+.staff-avatar .collar {
+  position: absolute;
+  top: 45px;
+  width: 20px;
+  height: 10px;
+  background: white;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+/* Manager's Cap */
+.manager-avatar .cap {
+  position: absolute;
+  top: -2px;
+  width: 40px;
+  height: 20px;
+  background: red;
+  border-radius: 10px 10px 0 0;
+}
+
+.manager-avatar .cap::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 50px;
+  height: 8px;
+  background: black;
+  border-radius: 4px;
+  left: -5px;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .login-box {
+    width: 80%;
+  }
+
+  .role-selection {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* Input Fields */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px; /* Rounded corners for input */
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  outline: none; /* Remove default outline */
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Input focus styling */
+.input-field:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); /* Add a glow effect when focused */
+}
+
+/* Placeholder styling */
+.input-field::placeholder {
+  color: #888; /* Lighter placeholder text */
+  font-style: italic;
+}
+/* Login Button */
+.login-button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: linear-gradient(45deg, #ff3b3b, #e53935); /* Gradient background */
+  color: white;
+  border: none;
+  border-radius: 30px; /* Round button edges */
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100%; /* Make button fill the available width */
+  box-shadow: 0 4px 12px rgba(255, 59, 59, 0.3); /* Soft shadow effect */
+}
+
+/* Hover Effect */
+.login-button:hover {
+  background: linear-gradient(45deg, #e53935, #d32f2f); /* Darker gradient on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 6px 20px rgba(255, 59, 59, 0.4); /* More intense shadow on hover */
+}
+
+/* Active (Clicked) Effect */
+.login-button:active {
+  transform: scale(0.98); /* Slight shrink on button click */
+  box-shadow: 0 4px 10px rgba(255, 59, 59, 0.6); /* Stronger shadow on click */
+}
+
+/* General styles for role cards */
+.role-selection {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: -9px;
+}
+
+.role-card {
+  background-color: #fff;
+  width: 170px;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlight the background color when selected */
+.role-card.selected {
+  background-color: #4CAF50;  /* Green background when selected */
+  color: white;  /* White text when selected */
+}
+
+.role-card:hover {
+  transform: scale(1.05);
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Input Fields */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+/* Login Button */
+.login-button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: linear-gradient(45deg, #ff3b3b, #e53935);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(255, 59, 59, 0.3);
+}
+
+.login-button:hover {
+  background: linear-gradient(45deg, #e53935, #d32f2f);
+  transform: scale(1.05);
+}
+
+.login-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 10px rgba(255, 59, 59, 0.6);
+}
