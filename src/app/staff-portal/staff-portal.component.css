@@ -173,3 +173,46 @@ button:hover {
 .btn-danger:hover {
   background-color: #c82333;
 }
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #dccaca;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Webcam styling */
+.webcam-container video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+}
+
+/* Responsive Image */
+.responsive-img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+}
+
+/* Button container */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+@media (min-width: 600px) {
+  .button-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

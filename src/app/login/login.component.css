@@ -200,22 +200,67 @@ p {
 @media (max-width: 768px) {
   .login-box {
     width: 80%;
+    padding: 20px;
   }
 
   .role-selection {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    height: auto;
+  }
+
+  .role-card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .login-button {
+    font-size: 16px;
+    padding: 12px 20px;
   }
 }
+
+@media (max-width: 480px) {
+  .login-box {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .role-card {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .role-selection {
+    gap: 10px;
+  }
+
+  .input-field {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .login-button {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+}
+
 /* Input Fields */
 .input-field {
   width: 100%;
   padding: 12px;
   font-size: 16px;
-  border-radius: 8px; /* Rounded corners for input */
+  border-radius: 8px;
   border: 1px solid #ccc;
   margin-bottom: 20px;
-  outline: none; /* Remove default outline */
+  outline: none;
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -230,6 +275,7 @@ p {
   color: #888; /* Lighter placeholder text */
   font-style: italic;
 }
+
 /* Login Button */
 .login-button {
   margin-top: 20px;
@@ -288,41 +334,4 @@ p {
   transform: scale(1.05);
   background-color: #4CAF50;
   color: white;
-}
-
-/* Input Fields */
-.input-field {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  margin-bottom: 20px;
-  outline: none;
-}
-
-/* Login Button */
-.login-button {
-  margin-top: 20px;
-  padding: 12px 20px;
-  background: linear-gradient(45deg, #ff3b3b, #e53935);
-  color: white;
-  border: none;
-  border-radius: 30px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  width: 100%;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 12px rgba(255, 59, 59, 0.3);
-}
-
-.login-button:hover {
-  background: linear-gradient(45deg, #e53935, #d32f2f);
-  transform: scale(1.05);
-}
-
-.login-button:active {
-  transform: scale(0.98);
-  box-shadow: 0 4px 10px rgba(255, 59, 59, 0.6);
 }

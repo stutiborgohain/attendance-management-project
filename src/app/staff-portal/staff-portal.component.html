@@ -10,7 +10,7 @@
 
   <!-- Webcam Section -->
   <div class="webcam-container" [hidden]="!webcamActive">
-    <video id="webcam" width="320" height="240" autoplay></video>
+    <video id="webcam" width="100%" height="auto" autoplay></video>
   </div>
 
   <!-- Capture Image Button below the webcam section -->
@@ -21,7 +21,7 @@
   <!-- Display captured image -->
   <div class="captured-image" [hidden]="!imageSrc">
     <h4>Attendance Image:</h4>
-    <img [src]="imageSrc" alt="Captured Attendance Image" width="200">
+    <img [src]="imageSrc" alt="Captured Attendance Image" class="responsive-img">
   </div>
 
   <!-- Save the captured image and Logout Button in the same line -->
